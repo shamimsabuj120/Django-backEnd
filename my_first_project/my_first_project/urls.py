@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib import admin
 from django.urls import path
-from first_app import views
+from django.conf.urls import include
+# from first_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
-    path('contact/',views.contact, name='contact'),
-    path('about/', views.about, name='about')
+    path('first_app/',include('first_app.urls')),
+    # path('', views.index, name='index'),
+    # path('contact/',views.contact, name='contact'),
+    # path('about/', views.about, name='about')
 
 ]
