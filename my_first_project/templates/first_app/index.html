@@ -1,12 +1,16 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>home page of first_app</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
 </head>
 <body>
   <h1>This is the first App</h1>
   <h2> I am being called from views.py of first_app</h2>
   {{ text_1 }}
+  <br>
+  <img src="{% static 'images/shamim.jpg' %}" alt="">
 </body>
 </html>
