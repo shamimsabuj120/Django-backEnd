@@ -9,7 +9,22 @@
 <body>
   <h1>This is the first App</h1>
   <h2> I am being called from views.py of first_app</h2>
-  {{ text_1 }}
+  <h1> {{ text_1 }} </h1>
+  <table border="1">
+      <tr>
+          <th> First Name</th>
+          <th> Last Name </th>
+          <th> Instrument</th>
+      </tr>
+      {% for row in Musician %}
+      <tr>
+          <td>{{ row.first_name }}</td>
+          <td>{{ row.last_name }}</td>
+          <td>{{ row.instrument }}</td>
+      </tr>
+      {% endfor %}
+
+  </table>
   <br>
   <img src="{% static 'images/shamim.jpg' %}" alt="">
 </body>
