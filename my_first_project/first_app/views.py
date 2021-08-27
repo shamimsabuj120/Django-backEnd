@@ -16,3 +16,6 @@ def contact(request):
 def about(request):
     return HttpResponse("<h1> this is about page</h1> <a href='/contact/'>contact</a> <a href='/'>homepage</a>")
 
+def form(request):
+    diction={}
+    return render(request,'first_app/form.html', context=diction)
