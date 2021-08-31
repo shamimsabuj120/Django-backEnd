@@ -20,9 +20,21 @@
         <h3>{{ heading_1 }}</h3>
         <form action="" method="post">
             {{ test_form.as_p }}
+            {% csrf_token %}
             <input type="submit" name="submit" value="submit">
         </form>
+        {% if form_submitted %}
+            <p>Name:{{user_name}} </p>
+            <p>Email:{{user_email}}</p>
+            <p>Date of Birth:{{user_date}}</p>
+            <p>Phone Number:{{user_phone}}</p>
+            <p>Boolean Field:{{boolean_field}}</p>
+            <p>Field:{{char_field}}</p>
+            <p>Choice:{{choice_field}}</p>
+            <p>Radio:{{radio_choice}}</p>
+            <p>Multiple:{{multiple_field}}</p>
+        {% endif %}
 
-    </form>
+<!--    </form>-->
 </body>
 </html>
